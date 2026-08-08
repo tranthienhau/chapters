@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Chapters",
+    "slug": "chapters",
+    "version": "1.0.0",
+    "scheme": "chapters",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FAF5EE",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.chapters.photobook"
+    },
+    "android": {
+      "package": "com.chapters.photobook",
+      "adaptiveIcon": {
+        "backgroundColor": "#C15F3C",
+        "foregroundImage": "./assets/icon.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      "expo-font"
+    ]
+  }
+}
