@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapters - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#7d2d0d",
+                        "surface-tint": "#9c4323",
+                        "primary": "#994121",
+                        "outline-variant": "#dcc1b8",
+                        "surface-container-highest": "#ebe1da",
+                        "background": "#fff8f5",
+                        "text-tertiary": "#9A9088",
+                        "secondary-fixed": "#d4e8cd",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1f1b17",
+                        "inverse-primary": "#ffb59c",
+                        "on-secondary-fixed": "#0f1f0f",
+                        "secondary-fixed-dim": "#b8ccb2",
+                        "tertiary-container": "#77746f",
+                        "primary-fixed": "#ffdbcf",
+                        "surface-dim": "#e2d8d2",
+                        "surface-container": "#f6ece5",
+                        "secondary-container": "#d4e8cd",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "border-hairline": "rgba(43,38,34,0.08)",
+                        "on-surface-variant": "#56423c",
+                        "primary-container": "#b95936",
+                        "inverse-surface": "#352f2b",
+                        "accent-dark": "#8F3F26",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#cac6bf",
+                        "surface-container-low": "#fcf2eb",
+                        "surface": "#fff8f5",
+                        "on-tertiary-fixed-variant": "#484742",
+                        "on-tertiary-fixed": "#1d1c18",
+                        "secondary": "#51634e",
+                        "primary-fixed-dim": "#ffb59c",
+                        "surface-container-high": "#f1e6e0",
+                        "on-secondary-container": "#576954",
+                        "surface-bright": "#fff8f5",
+                        "on-secondary-fixed-variant": "#3a4b37",
+                        "on-tertiary-container": "#fffbff",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#e6e2db",
+                        "outline": "#89726b",
+                        "surface-sand": "#F2EADE",
+                        "inverse-on-surface": "#f9efe8",
+                        "accent-pressed": "#9C4A2C",
+                        "text-secondary": "#6B6259",
+                        "on-primary-fixed": "#390c00",
+                        "accent-tint": "#F3E3DA",
+                        "surface-variant": "#ebe1da",
+                        "on-surface": "#1f1b17",
+                        "tertiary": "#5e5c57",
+                        "on-primary-container": "#fffbff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-page": "24px",
+                        "gutter": "16px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "safe-top": "59px",
+                        "stack-sm": "8px",
+                        "safe-bottom": "34px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Fraunces"],
+                        "display-lg-mobile": ["Fraunces"],
+                        "body-base": ["Inter"],
+                        "display-lg": ["Fraunces"],
+                        "caption": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-base": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    },
+                    "boxShadow": {
+                        "soft-warm": "0 8px 24px rgba(43, 38, 34, 0.08)"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #C15F3C;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #C15F3C;
+        }
+        .toggle-checkbox:checked + .toggle-label:after {
+            transform: translateX(100%);
+            border-color: white;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#FAF5EE] min-h-screen text-on-surface antialiased font-body-base text-body-base pb-[118px]">
+<!-- Top App Bar -->
+<header class="w-full top-0 sticky bg-[#FAF5EE] z-40 transition-all duration-200">
+<div class="flex items-center justify-between px-margin-page h-[59px] w-full pt-safe-top">
+<!-- Leading empty for balance or back if needed, but not specified in prompt -->
+<div class="w-10"></div>
+<h1 class="font-title-md text-title-md text-on-surface">Profile</h1>
+<!-- Trailing Settings Icon -->
+<button class="w-10 h-10 flex items-center justify-end text-on-surface hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+</div>
+</header>
+<main class="px-margin-page pt-stack-md flex flex-col gap-stack-lg max-w-md mx-auto">
+<!-- Profile Card -->
+<section class="bg-surface-sand rounded-[20px] p-6 shadow-soft-warm flex flex-col items-center">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-4 border-4 border-[#FAF5EE]">
+<img class="w-full h-full object-cover" data-alt="A close-up portrait of a young woman with a warm, natural smile, standing outdoors in soft, golden-hour light. The background is slightly blurred showing nature, matching a high-end editorial travel photobook style with natural tones and a minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-aeG-DhJ8byqEl4nOhVyCtQW9NqX3T1TYzbUiYrkEPRaTT_sQDZ7RGI8YdVbqIb-arLZmXhKqMuURRU2XAkcX-oeNWXrdQvRnzAcroUdGqQYmEJDNsDwirC-32xix1z1JiIR32lEuEhIe_zf4ZtyhmtPQskfIMhZmoSi4mg5L9H60QElznipdQqllfKavyr9w4WbhNcWxJrfW3DNeLJtmdJHamLAg4EI4ww_qhyX7634AVNOWEfg4hrHMEhj0EJsqR9rVgNrvv2M"/>
+</div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-on-surface mb-6">Emma Carter</h2>
+<div class="flex w-full justify-between px-4">
+<div class="flex flex-col items-center">
+<span class="font-label-bold text-label-bold text-on-surface">12</span>
+<span class="font-caption text-caption text-text-secondary mt-1">Trips</span>
+</div>
+<div class="w-[1px] h-8 bg-border-hairline"></div>
+<div class="flex flex-col items-center">
+<span class="font-label-bold text-label-bold text-on-surface">5</span>
+<span class="font-caption text-caption text-text-secondary mt-1">Books</span>
+</div>
+<div class="w-[1px] h-8 bg-border-hairline"></div>
+<div class="flex flex-col items-center">
+<span class="font-label-bold text-label-bold text-on-surface">3.4k</span>
+<span class="font-caption text-caption text-text-secondary mt-1">Photos</span>
+</div>
+</div>
+</section>
+<!-- Settings Groups -->
+<div class="flex flex-col gap-4">
+<!-- Permissions -->
+<section class="bg-surface-sand rounded-[20px] shadow-soft-warm overflow-hidden">
+<div class="p-4 flex items-center justify-between border-b border-border-hairline">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary">photo_library</span>
+<span class="font-body-base text-body-base text-on-surface">Photos</span>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer z-10 transition-transform duration-200 ease-in-out border-[#C15F3C] translate-x-6" id="toggle-photos" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-[#C15F3C] cursor-pointer" for="toggle-photos"></label>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary">location_on</span>
+<span class="font-body-base text-body-base text-on-surface">Location</span>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer z-10 transition-transform duration-200 ease-in-out border-[#C15F3C] translate-x-6" id="toggle-location" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-[#C15F3C] cursor-pointer" for="toggle-location"></label>
+</div>
+</div>
+</section>
+<!-- Navigation Links -->
+<section class="bg-surface-sand rounded-[20px] shadow-soft-warm overflow-hidden">
+<a class="p-4 flex items-center justify-between border-b border-border-hairline hover:bg-surface-variant transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary">shopping_bag</span>
+<span class="font-body-base text-body-base text-on-surface">My orders</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-accent-tint text-primary font-caption text-caption px-2 py-1 rounded-full">1 Shipped</span>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+</a>
+<a class="p-4 flex items-center justify-between border-b border-border-hairline hover:bg-surface-variant transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary">history</span>
+<span class="font-body-base text-body-base text-on-surface">Travel history</span>
+</div>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</a>
+<a class="p-4 flex items-center justify-between border-b border-border-hairline hover:bg-surface-variant transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary">notifications</span>
+<span class="font-body-base text-body-base text-on-surface">Notification preferences</span>
+</div>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</a>
+<a class="p-4 flex items-center justify-between hover:bg-surface-variant transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary">help</span>
+<span class="font-body-base text-body-base text-on-surface">Support</span>
+</div>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</a>
+</section>
+<!-- Account Actions -->
+<section class="bg-surface-sand rounded-[20px] shadow-soft-warm overflow-hidden mt-2">
+<button class="w-full p-4 flex items-center justify-center hover:bg-surface-variant transition-colors">
+<span class="font-label-bold text-label-bold text-primary">Sign out</span>
+</button>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<!-- The prompt specified: active tab Profile in #C15F3C, others in #9A9088. Using Tailwind classes provided in JSON. -->
+<nav class="fixed bottom-0 w-full z-50 h-[84px] border-t border-border-hairline bg-surface dark:bg-surface-container flex justify-around items-center px-margin-page pb-safe-bottom">
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-text-tertiary hover:text-primary dark:hover:text-primary-fixed-dim transition-colors transition-transform duration-300 active:scale-90 w-16" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">auto_stories</span>
+<span class="font-label-bold text-caption">Chapters</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-text-tertiary hover:text-primary dark:hover:text-primary-fixed-dim transition-colors transition-transform duration-300 active:scale-90 w-16" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">notifications</span>
+<span class="font-label-bold text-caption">Alerts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors transition-transform duration-300 active:scale-90 w-16" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-bold text-caption">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple toggle logic for custom styling if needed, standard checkbox handles basic state
+        const toggles = document.querySelectorAll('.toggle-checkbox');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                if(this.checked) {
+                    this.classList.add('translate-x-6', 'border-[#C15F3C]');
+                    this.classList.remove('translate-x-0', 'border-gray-300');
+                    this.nextElementSibling.classList.add('bg-[#C15F3C]');
+                    this.nextElementSibling.classList.remove('bg-gray-300');
+                } else {
+                    this.classList.remove('translate-x-6', 'border-[#C15F3C]');
+                    this.classList.add('translate-x-0', 'border-gray-300');
+                    this.nextElementSibling.classList.remove('bg-[#C15F3C]');
+                    this.nextElementSibling.classList.add('bg-gray-300');
+                }
+            });
+        });
+    </script>
+</body></html>

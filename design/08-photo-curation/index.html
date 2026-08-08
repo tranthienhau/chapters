@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Photo Curation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "text-tertiary": "#9A9088",
+                        "on-secondary-fixed-variant": "#3a4b37",
+                        "on-primary-fixed-variant": "#7d2d0d",
+                        "tertiary": "#5e5c57",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#51634e",
+                        "inverse-on-surface": "#f9efe8",
+                        "background": "#fff8f5",
+                        "tertiary-fixed-dim": "#cac6bf",
+                        "inverse-primary": "#ffb59c",
+                        "text-secondary": "#6B6259",
+                        "border-hairline": "rgba(43,38,34,0.08)",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-highest": "#ebe1da",
+                        "outline-variant": "#dcc1b8",
+                        "on-secondary-fixed": "#0f1f0f",
+                        "primary-fixed": "#ffdbcf",
+                        "secondary-fixed-dim": "#b8ccb2",
+                        "on-surface-variant": "#56423c",
+                        "on-tertiary": "#ffffff",
+                        "accent-pressed": "#9C4A2C",
+                        "surface-dim": "#e2d8d2",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline": "#89726b",
+                        "secondary-fixed": "#d4e8cd",
+                        "primary-container": "#b95936",
+                        "surface-container": "#f6ece5",
+                        "surface-container-high": "#f1e6e0",
+                        "on-tertiary-fixed": "#1d1c18",
+                        "on-primary-container": "#fffbff",
+                        "tertiary-container": "#77746f",
+                        "on-primary": "#ffffff",
+                        "primary": "#994121",
+                        "on-surface": "#1f1b17",
+                        "inverse-surface": "#352f2b",
+                        "on-tertiary-fixed-variant": "#484742",
+                        "error": "#ba1a1a",
+                        "on-background": "#1f1b17",
+                        "surface-bright": "#fff8f5",
+                        "surface-container-low": "#fcf2eb",
+                        "on-error-container": "#93000a",
+                        "surface": "#fff8f5",
+                        "surface-sand": "#F2EADE",
+                        "secondary-container": "#d4e8cd",
+                        "surface-variant": "#ebe1da",
+                        "surface-tint": "#9c4323",
+                        "accent-tint": "#F3E3DA",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#390c00",
+                        "primary-fixed-dim": "#ffb59c",
+                        "tertiary-fixed": "#e6e2db",
+                        "on-secondary-container": "#576954",
+                        "accent-dark": "#8F3F26"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-page": "24px",
+                        "safe-top": "59px",
+                        "gutter": "16px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "safe-bottom": "34px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Fraunces"],
+                        "label-bold": ["Inter"],
+                        "caption": ["Inter"],
+                        "title-md": ["Fraunces"],
+                        "display-lg-mobile": ["Fraunces"],
+                        "body-base": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "title-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-base": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+        .aspect-square {
+            aspect-ratio: 1 / 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-base antialiased min-h-screen pb-[84px] pt-[59px]">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background flex items-center justify-between px-margin-page h-[59px] w-full">
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="text-center">
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-on-surface">Your best shots</h1>
+<p class="font-body-base text-caption text-text-secondary">42 of 214 selected</p>
+</div>
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<!-- Filter Chips -->
+<div class="px-margin-page py-4 flex gap-2 overflow-x-auto no-scrollbar whitespace-nowrap">
+<button class="px-4 py-2 rounded-full bg-surface-sand text-on-surface font-label-bold text-label-bold border border-transparent">All</button>
+<button class="px-4 py-2 rounded-full bg-accent-tint text-primary font-label-bold text-label-bold border border-transparent flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] fill-current" data-icon="auto_awesome">auto_awesome</span>
+            AI picks
+        </button>
+<button class="px-4 py-2 rounded-full bg-surface-sand text-on-surface font-label-bold text-label-bold border border-transparent">People</button>
+<button class="px-4 py-2 rounded-full bg-surface-sand text-on-surface font-label-bold text-label-bold border border-transparent">Scenery</button>
+<button class="px-4 py-2 rounded-full bg-surface-sand text-on-surface font-label-bold text-label-bold border border-transparent">Food</button>
+</div>
+<!-- Main Content Grid -->
+<main class="w-full">
+<div class="photo-grid">
+<!-- Selected Image 1 -->
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="A stunning Mediterranean coastal village built into dramatic cliffs. Sun-drenched terracotta roofs contrast with the deep azure blue of the ocean below. Bright, airy, and warm natural lighting typical of an Italian summer afternoon. High-end editorial travel photography style with a calm, nostalgic mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmJ5thd_ugJrA-zrYRLLHdVyrpldJ1pRLEcBo_QtoEdaqDOLQqKElh6BrdGnGjQHlRFOk0TuEirVwZtf2i7GHka904z-hNQCB17EEXQ3AsH1oq_WGlfsu8ylVj94c9pN4-gztBQN-cO3vruHsJmJpn-eqzQC_TXBMgfdV9qXGLSVbrtcQo4D4o3ASx6WUE58gOYNaegvRIXOW9qZwzw5kGBJ_g-atnbMatSm2Vd1t0xjyaU2BqdHmF1sbhA-3qNBxtBgKUjP90z-8"/>
+<div class="absolute top-1 right-1 text-primary drop-shadow-md">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-on-primary rounded-full p-1 drop-shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<!-- Unselected Image 1 -->
+<div class="relative aspect-square opacity-70 grayscale-[20%]">
+<img class="w-full h-full object-cover" data-alt="A tranquil alleyway in a historic Italian town, paved with worn cobblestones. Climbing ivy and potted geraniums frame an ancient wooden doorway. Soft, dappled sunlight filters through overhead foliage, creating a peaceful and quiet atmosphere. Captured in a minimalist, photobook-ready style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDsgTUdcthraDEpUnMMVFEG-6OPEGnxfCuuagXvITKROFxiIQreXhjEpq3uEyZXdPSJALWuVql0JKiiODCOi63ONXEJ3mdF2LefORb4i8yOOzcxfVDuFRnMy5mzkQLgYII3BhKIi9NPQGByrsEA6CtI_rr-webFy3wZdV1as_xnkynk_GmZDNHvwvvhg_ZlAxRIwjHWxJhFFAm_HOJQxAVyQ5rLOjlfozW7hIQ17e3_xdNtIydAdGZ0f-_fiv8sYChVnaZhBYDA1I"/>
+</div>
+<!-- Selected Image 2 -->
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="A perfect plate of fresh pasta sitting on a rustic wooden table overlooking an olive grove. The warm Mediterranean sun highlights the rich reds of the tomato sauce and the vibrant green of basil. The composition is intimate and appetizing, evoking the slow-living culinary culture of Italy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzzwFIoFy80tCV3u_vlpI8GC0HUcd6IUExvURnxMNRBsTLRDTCs9kneKEVRP1iNMGznDWnWRrLk3_j2dIxCUBA9F0LbUhHkSUztup1Ld1NU8Gkg4REIEFm-o3EPAGJpqWy0Q_EbTG4lmkCJqO5UtIPgaJG3tLVrohcFV45A4v5OHk9NTZrX0KYiqLK7RzcABYMNvLT2hfn5Nfl3esE8z7S7LrIuISKx9GoZtkf9RRfpJ2QFMjENXZceCxQ9d-Od0yAL0ywEaHBg_0"/>
+<div class="absolute top-1 right-1 text-primary drop-shadow-md">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-on-primary rounded-full p-1 drop-shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<!-- Selected Image 3 -->
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="A sprawling vineyard in Tuscany bathed in golden hour light. The rolling hills stretch into the distance, patterned by neat rows of grapevines. A solitary stone farmhouse sits on a distant crest. The mood is serene, romantic, and deeply connected to nature, with a warm, earthy color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClNk_mmUOZRPVq14n1iqQFEb1yIbUOSGqaqn7n1nE-36hqjTSBlhIZpUcTLqTkHEnvDYbQ6prdbpGwjoRN8PaJdgJBe-3bgfdlrj8ywzcSg6bwcWyQvxXWHqkPcWokO_FyxIZb13r3wouOOqw4D3A9-wfdvsF_4ij4Tm_gWDykzvS4i7F9px_Rh_OWit6kTW4W7X5ztihzOCF7d6hq-kYa5GsPtoBta3HTNTt-1grB37ra8JrQAYwIg84ylnbbJmXqMfZtGJC4gN4"/>
+<div class="absolute top-1 right-1 text-primary drop-shadow-md">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-on-primary rounded-full p-1 drop-shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<!-- Unselected Image 2 -->
+<div class="relative aspect-square opacity-70 grayscale-[20%]">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a classic Italian espresso cup resting on a marble cafe table. In the softly blurred background, locals are seen chatting. The lighting is bright and clean, capturing the morning energy of a European piazza while maintaining a sophisticated, minimalist composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJMKahJASw6OjMfPJUQkrF1fBNLx9bDOJ7BCZe1CzafFwo9wxNarHOt-SWhxpMbAFdiTkpZQEuj-CO64yKqSdT94sfiGk_zXnYZzGrX6bs7RoBc1Bm4xCoew2YZt47-5giMm9XLcf0zspMlHcQjILql0RtrpwHfEQEiFdQBxEfSjIwyKYEN95gDMZdgDaWPEiUJX3fI7sOyqTwHjtSP8ZqVGrToiA-sgaF97yW_zA8ZRsNqKkBKG_P4Lhj9gIC7-JRfAC_LwlrL74"/>
+</div>
+<!-- Unselected Image 3 -->
+<div class="relative aspect-square opacity-70 grayscale-[20%]">
+<img class="w-full h-full object-cover" data-alt="A beautifully weathered statue in a lush, classical Italian garden. Tall cypress trees provide a dark green backdrop to the pale stone. The atmosphere is quiet, historical, and slightly melancholic, rendered in a soft, low-contrast photographic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0RLP6bMdMmOl6S8Nx3IGEuj6dAZ_HfVAVzvE3LyBOJ9EdnoZLNLj459PcB41uT7ju1a89Oi9verzjVkps_q1cauTrvcPq87dl5QyNkPj5cYLdrP7cblt5mzzXdou8qY-NXq7SfeMNnTFml8r1uypWQ6pCCdosg5F8AwR34VWVxNrCUzefacGef0SxOUO89Fv6VHkcqRRZWIEnqnvmOiyt1D_uPq7ge7yLLGPmB0jSzr2ESAQeVTM28P5mKgwWZ3BtOBGJZtqwxQs"/>
+</div>
+<!-- Selected Image 4 -->
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="A vibrant local market scene with colorful fruit and vegetable stalls. The focus is on a basket of deeply colored Sicilian lemons, their bright yellow skin contrasting with the warm shadows. The image feels lively yet composed, echoing the rich textures of Mediterranean life." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmT4Hd68zoUbCf63xYkcR6uTq-iQI4YdOpGVmKhZ4wqJJmh_2rL7AeHGZ1CHD5EyEwmArGylyZFS0qPvkKB0f2inxo-aX2Od8kZ_yWtZT0P9wkCOAvDbyEG6cY1Qq8Kx65_1sSu4ZNV534Vc7tfISo8dIlzSs5V-6hyxDc4zTIKI6UgxGGIL_27G_I3qF7yYaZA1v-NurEDXLY6gseW8WxQnLoPT26iBgkp-tPQHYoxPzfBB1-tpdyVE5u5q1ybyWRtAjR70Q6HWk"/>
+<div class="absolute top-1 right-1 text-primary drop-shadow-md">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-on-primary rounded-full p-1 drop-shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<!-- Unselected Image 4 -->
+<div class="relative aspect-square opacity-70 grayscale-[20%]">
+<img class="w-full h-full object-cover" data-alt="A wide shot of a tranquil Mediterranean bay at dusk. The water is perfectly still, reflecting the pastel pink and purple hues of the sky. A small, simple wooden fishing boat rests near the shore. The overall aesthetic is minimalist, peaceful, and visually soothing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAN9spt93NeZa2YsMYath55GP9nBuSRZAfYWQ8L1594RzzHB5Uwfu0PrBrdl6QohuYjERC44WmWuZtjXfM_9JTXQh4ddKj0qNiZxhRz2QN-s7YuEywstCHxasHkRS95K6uqCkhG0AZI0Me_s2OXudLcj70ertk-nJuhP44iwYasy66KaTRjHQ1WqZJWG6xFHtTWpRU5XgqsAjO00lBLdbYsBePzN9-nKsMgX7we1LywHs62IdRmcJqeoU1a20Ed75wfqJeHBY6F6k"/>
+</div>
+<!-- Selected Image 5 -->
+<div class="relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="A dramatic architectural shot looking up at the intricate dome of a Renaissance church in Rome. The interplay of light and shadow highlights the detailed stonework. The composition is highly structured and symmetrical, presenting classic beauty with a modern, clean editorial eye." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGj4WtoDfzwUkltrVluYTID9_AYzvNJe7erlO5MwCqoFEb6fTEylqyL-NDWA6CDBeANj6Gayyc9r-OXtPlOWPQP9YOsCmun4XbT-1tc-uAXVzKGhoaX4lNRQ5UMs81B-ew3y6NkO1V_R5zTdL7S_XIdHmLh2UgdYBkm5T13nrBK-Nd-5-IGhIl5VRZ7Lclr0NvcG3SpvIMuRk5BnvvCXSsPEkFNmUllEZbIJCHb0VNBXOsktd4wuCPX265RC9pW7gmph9DF8P8jms"/>
+<div class="absolute top-1 right-1 text-primary drop-shadow-md">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-on-primary rounded-full p-1 drop-shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl border-t border-border-hairline bg-surface-container-low shadow-[0px_-8px_24px_rgba(43,38,34,0.08)] fixed bottom-0 w-full h-[84px] px-margin-page pb-safe-bottom flex items-center justify-between">
+<div class="font-label-bold text-label-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            42 photos selected
+        </div>
+<button class="bg-primary text-on-primary rounded-full px-6 py-3 flex items-center gap-2 font-label-bold text-label-bold hover:bg-accent-pressed transition-colors scale-[0.98] transition-transform">
+            Looks good
+            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,74 @@
+{
+  "title": "Chapters",
+  "slug": "chapters",
+  "domain": "travel-photobook",
+  "style": "bright",
+  "screenCount": 12,
+  "designSystem": {
+    "variant": "warm-editorial (brand-matched to printchapters.com)",
+    "color": {
+      "accent": "#C15F3C",
+      "accentFill": "#C15F3C",
+      "accentTint": "#F3E3DA",
+      "accentPressed": "#9C4A2C",
+      "accentDark": "#8F3F26",
+      "support": "#8B9E86",
+      "background": "#FAF5EE",
+      "surfaceAlt": "#F2EADE",
+      "text": {
+        "primary": "#2B2622",
+        "secondary": "#6B6259",
+        "tertiary": "#9A9088"
+      }
+    },
+    "type": {
+      "fontFamily": "Inter",
+      "displayFamily": "Fraunces",
+      "display": "34/700",
+      "title": "22/600",
+      "body": "16/400",
+      "label": "14/600",
+      "caption": "12/500"
+    },
+    "radius": { "card": 20, "button": 14, "chip": 999 },
+    "elevation": "soft warm shadow rgba(43,38,34,0.08) y8 blur24",
+    "icons": "rounded outline 24px, single set",
+    "a11y": "AA on cream background"
+  },
+  "sharedComponents": {
+    "bottomTabBar": {
+      "tabs": [
+        { "label": "Chapters", "icon": "book" },
+        { "label": "Alerts", "icon": "bell" },
+        { "label": "Profile", "icon": "user" }
+      ],
+      "active": "accent terracotta",
+      "inactive": "neutral warm grey"
+    }
+  },
+  "features": [
+    "AI auto-generated photobook per trip from camera roll",
+    "Location-triggered welcome-home reminders",
+    "AI theme recommendation (Editorial/Iconic/Minimal/Classic)",
+    "AI best-photo curation with star badges",
+    "Editorial swipeable book preview",
+    "Book customization + extra-pages upsell",
+    "Order/checkout with format + size",
+    "Notifications center",
+    "Photo + location permission management"
+  ],
+  "screens": [
+    { "n": "01", "name": "onboarding-welcome", "nav": "none", "group": "onboarding" },
+    { "n": "02", "name": "onboarding-permissions", "nav": "none", "group": "onboarding" },
+    { "n": "03", "name": "home-chapters", "nav": "Chapters", "group": "core" },
+    { "n": "04", "name": "home-empty", "nav": "Chapters", "group": "core" },
+    { "n": "05", "name": "welcome-home", "nav": "none", "group": "core" },
+    { "n": "06", "name": "book-preview", "nav": "none", "group": "detail" },
+    { "n": "07", "name": "theme-picker", "nav": "none", "group": "detail" },
+    { "n": "08", "name": "photo-curation", "nav": "none", "group": "detail" },
+    { "n": "09", "name": "book-customization", "nav": "none", "group": "detail" },
+    { "n": "10", "name": "checkout", "nav": "none", "group": "detail" },
+    { "n": "11", "name": "notifications", "nav": "Alerts", "group": "core" },
+    { "n": "12", "name": "profile", "nav": "Profile", "group": "settings" }
+  ]
+}

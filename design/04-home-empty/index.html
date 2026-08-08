@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Chapters</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#77746f",
+                      "primary-fixed": "#ffdbcf",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed-variant": "#7d2d0d",
+                      "secondary-fixed-dim": "#b8ccb2",
+                      "tertiary": "#5e5c57",
+                      "inverse-primary": "#ffb59c",
+                      "on-surface-variant": "#56423c",
+                      "tertiary-fixed-dim": "#cac6bf",
+                      "primary-fixed-dim": "#ffb59c",
+                      "surface": "#fff8f5",
+                      "surface-dim": "#e2d8d2",
+                      "secondary": "#51634e",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#390c00",
+                      "on-tertiary-container": "#fffbff",
+                      "on-error-container": "#93000a",
+                      "accent-dark": "#8F3F26",
+                      "secondary-container": "#d4e8cd",
+                      "primary-container": "#b95936",
+                      "tertiary-fixed": "#e6e2db",
+                      "on-tertiary-fixed-variant": "#484742",
+                      "surface-container-low": "#fcf2eb",
+                      "inverse-on-surface": "#f9efe8",
+                      "on-background": "#1f1b17",
+                      "surface-variant": "#ebe1da",
+                      "primary": "#994121",
+                      "accent-tint": "#F3E3DA",
+                      "surface-container-highest": "#ebe1da",
+                      "error": "#ba1a1a",
+                      "background": "#fff8f5",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#1f1b17",
+                      "surface-tint": "#9c4323",
+                      "text-tertiary": "#9A9088",
+                      "on-tertiary-fixed": "#1d1c18",
+                      "outline": "#89726b",
+                      "on-error": "#ffffff",
+                      "surface-container": "#f6ece5",
+                      "on-secondary-container": "#576954",
+                      "surface-bright": "#fff8f5",
+                      "surface-sand": "#F2EADE",
+                      "outline-variant": "#dcc1b8",
+                      "error-container": "#ffdad6",
+                      "accent-pressed": "#9C4A2C",
+                      "on-secondary-fixed": "#0f1f0f",
+                      "text-secondary": "#6B6259",
+                      "surface-container-high": "#f1e6e0",
+                      "inverse-surface": "#352f2b",
+                      "border-hairline": "rgba(43,38,34,0.08)",
+                      "on-primary-container": "#fffbff",
+                      "secondary-fixed": "#d4e8cd",
+                      "on-secondary-fixed-variant": "#3a4b37"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "8px",
+                      "safe-bottom": "34px",
+                      "safe-top": "59px",
+                      "stack-md": "16px",
+                      "stack-lg": "32px",
+                      "margin-page": "24px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "title-md": [
+                              "Fraunces"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "body-base": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Fraunces"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Fraunces"
+                      ]
+              },
+              "fontSize": {
+                      "title-md": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-base": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "34px",
+                              {
+                                      "lineHeight": "42px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-[100dvh]">
+<!-- Main Content -->
+<main class="flex-grow flex flex-col px-margin-page pt-safe-top pb-safe-bottom">
+<!-- Header -->
+<header class="w-full top-0 z-50 bg-surface dark:bg-surface-dim flat no shadows flex items-center justify-between h-[59px] sticky">
+<button aria-label="Menu" class="text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed">Chapters</h1>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</header>
+<!-- Empty State Content -->
+<div class="flex-grow flex flex-col items-center justify-center text-center max-w-sm mx-auto space-y-stack-lg mt-12 mb-32">
+<div class="w-48 h-48 sm:w-64 sm:h-64 mb-4">
+<img alt="Illustration of open photobook and camera" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB943zIvR15RC0pb1U5aYXFnxOE5BUN01Qde3HTQ-1moKcFxkOUl8DgIRlcToHoO-lmvgeAkjn2PCCnym9OF3frtfn9i3--xhGDvfRleWur3hRhMTeBML_VED-H1toGSDpmtGrllGMTRoCoLzHsKh_Q8RcQp0uumQ0wGjZnUrj0B89q92n5211QaxZiqa5L1CEqsl7_5xLaAicy9Ktj8-tYREOGiy6L4Y4PgnKQdQLEwYrTH5w6JmrJuduNhkl5NW8EErw4pajIc2g"/>
+</div>
+<div class="space-y-stack-md">
+<h2 class="font-title-md text-title-md text-on-surface">No chapters yet</h2>
+<p class="font-body-base text-body-base text-text-secondary">Take a trip and we'll build your first photobook automatically. Your next journey becomes a book.</p>
+</div>
+<button class="bg-[#C15F3C] text-white w-full h-[52px] rounded-[14px] font-label-bold text-label-bold hover:bg-accent-pressed active:scale-95 transition-all mt-4">
+                Create one manually
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface dark:bg-surface-container border-t border-border-hairline flat no shadows flex justify-around items-center h-[84px] pb-safe-bottom px-margin-page">
+<!-- Active Tab: Chapters -->
+<button aria-label="Chapters" class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed active:scale-95 transition-transform">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-label-bold text-label-bold text-[10px]">Chapters</span>
+</button>
+<!-- Inactive Tab: Alerts -->
+<button aria-label="Alerts" class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed active:scale-95 transition-transform">
+<span class="material-symbols-outlined mb-1">notifications</span>
+<span class="font-label-bold text-label-bold text-[10px]">Alerts</span>
+</button>
+<!-- Inactive Tab: Profile -->
+<button aria-label="Profile" class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed active:scale-95 transition-transform">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-bold text-label-bold text-[10px]">Profile</span>
+</button>
+</nav>
+</body></html>

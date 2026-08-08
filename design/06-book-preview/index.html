@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Photobook Preview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#f9efe8",
+                      "text-secondary": "#6B6259",
+                      "border-hairline": "rgba(43,38,34,0.08)",
+                      "surface-container-low": "#fcf2eb",
+                      "primary-container": "#b95936",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed": "#390c00",
+                      "surface-dim": "#e2d8d2",
+                      "surface-variant": "#ebe1da",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#352f2b",
+                      "on-tertiary-container": "#fffbff",
+                      "tertiary-fixed-dim": "#cac6bf",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed": "#d4e8cd",
+                      "accent-tint": "#F3E3DA",
+                      "surface-sand": "#F2EADE",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#7d2d0d",
+                      "accent-dark": "#8F3F26",
+                      "primary-fixed": "#ffdbcf",
+                      "surface-bright": "#fff8f5",
+                      "on-surface": "#1f1b17",
+                      "surface-container-highest": "#ebe1da",
+                      "on-background": "#1f1b17",
+                      "surface-container": "#f6ece5",
+                      "tertiary": "#5e5c57",
+                      "error": "#ba1a1a",
+                      "secondary": "#51634e",
+                      "text-tertiary": "#9A9088",
+                      "secondary-container": "#d4e8cd",
+                      "secondary-fixed-dim": "#b8ccb2",
+                      "background": "#fff8f5",
+                      "tertiary-container": "#77746f",
+                      "primary": "#994121",
+                      "inverse-primary": "#ffb59c",
+                      "primary-fixed-dim": "#ffb59c",
+                      "on-secondary": "#ffffff",
+                      "surface": "#fff8f5",
+                      "outline-variant": "#dcc1b8",
+                      "on-secondary-container": "#576954",
+                      "surface-tint": "#9c4323",
+                      "surface-container-high": "#f1e6e0",
+                      "on-secondary-fixed-variant": "#3a4b37",
+                      "on-surface-variant": "#56423c",
+                      "on-primary-container": "#fffbff",
+                      "tertiary-fixed": "#e6e2db",
+                      "outline": "#89726b",
+                      "on-tertiary-fixed-variant": "#484742",
+                      "on-error": "#ffffff",
+                      "accent-pressed": "#9C4A2C",
+                      "on-secondary-fixed": "#0f1f0f",
+                      "on-tertiary-fixed": "#1d1c18",
+                      "book-bg": "#FAF5EE"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "safe-bottom": "34px",
+                      "stack-sm": "8px",
+                      "margin-page": "24px",
+                      "gutter": "16px",
+                      "stack-md": "16px",
+                      "stack-lg": "32px",
+                      "safe-top": "59px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Fraunces"
+                      ],
+                      "body-base": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Fraunces"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "title-md": [
+                              "Fraunces"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "34px",
+                              {
+                                      "lineHeight": "42px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-base": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "title-md": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              },
+              boxShadow: {
+                  'warm': '0 8px 24px rgba(43, 38, 34, 0.08)',
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: #FAF5EE; /* Matching the requested warm cream exactly */
+        }
+        /* Custom scrollbar for chips area to hide it visually while remaining functional */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-on-surface font-body-base antialiased flex flex-col pt-safe-top pb-safe-bottom">
+<!-- Top Navigation Area -->
+<header class="flex items-center justify-between px-margin-page h-[59px] w-full top-0 z-50 bg-[#FAF5EE]">
+<button aria-label="Go back" class="flex items-center justify-center w-12 h-12 -ml-3 text-on-surface transition-opacity hover:opacity-80 active:scale-95">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-title-md text-title-md text-on-surface text-center flex-1">Italy, Spring 2026</h1>
+<button class="bg-primary text-on-primary font-label-bold text-label-bold px-4 py-2 rounded-full transition-colors active:bg-accent-pressed">
+            Order
+        </button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col items-center justify-center px-margin-page w-full max-w-4xl mx-auto overflow-hidden">
+<!-- Photobook Mockup Focal Point -->
+<div class="relative w-full aspect-[3/2] max-h-[60vh] mt-stack-lg shadow-warm rounded-lg overflow-hidden bg-white">
+<img alt="Photobook Spread Mockup" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSil2cOoe9IZw3jWuilRyFX4jVTuMwNFiTjNfJ7zFCvieOTbi0ThYLyznDPKbYnKwIihLYP8j02AJoPvY_YRQMya-mWtFe1PkflvtmiceoID7HHWC_wiJinnkZ_dKqoloMNvUtHiNiB2ss1JP6-O4FYzdwNOusYZoJXQ-E9dq1WVgodBFNsNzoNenKC7O0v11dt1l1HaZeVhZaXQaIwzm9vesGjYEEWKs116pzPkuZwgMK1ZLu3jsDHt1XOVcgFg7-GJrVOwtIAVk"/>
+<!-- Book Center Crease Illusion (Subtle overlay) -->
+<div class="absolute inset-y-0 left-1/2 w-8 -ml-4 bg-gradient-to-r from-transparent via-black/5 to-transparent pointer-events-none"></div>
+</div>
+<!-- Page Indicator & Navigation Affordance -->
+<div class="flex items-center justify-between w-full max-w-sm mt-stack-md px-4">
+<button aria-label="Previous page" class="p-2 text-text-secondary transition-opacity hover:opacity-80 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<span class="font-caption text-caption text-text-secondary">Page 4 of 28</span>
+<button aria-label="Next page" class="p-2 text-text-secondary transition-opacity hover:opacity-80 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Bottom Theme Selector Area -->
+<section class="mt-auto pt-stack-lg px-margin-page w-full overflow-x-auto no-scrollbar pb-stack-md border-t border-border-hairline">
+<div class="flex space-x-gutter min-w-max">
+<!-- Selected Chip -->
+<button class="h-10 px-5 rounded-full font-label-bold text-label-bold transition-colors bg-accent-tint text-[#C15F3C] flex items-center justify-center">
+                Editorial
+            </button>
+<!-- Idle Chips -->
+<button class="h-10 px-5 rounded-full font-label-bold text-label-bold transition-colors bg-surface-sand text-on-surface hover:bg-surface-variant flex items-center justify-center">
+                Iconic
+            </button>
+<button class="h-10 px-5 rounded-full font-label-bold text-label-bold transition-colors bg-surface-sand text-on-surface hover:bg-surface-variant flex items-center justify-center">
+                Minimal
+            </button>
+<button class="h-10 px-5 rounded-full font-label-bold text-label-bold transition-colors bg-surface-sand text-on-surface hover:bg-surface-variant flex items-center justify-center">
+                Classic
+            </button>
+</div>
+</section>
+</body></html>

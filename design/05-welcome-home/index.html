@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Welcome Home - Draft Book Ready</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#fcf2eb",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#ebe1da",
+                        "text-secondary": "#6B6259",
+                        "surface-container-highest": "#ebe1da",
+                        "on-primary-fixed": "#390c00",
+                        "surface": "#fff8f5",
+                        "on-tertiary-fixed-variant": "#484742",
+                        "background": "#fff8f5",
+                        "surface-sand": "#F2EADE",
+                        "primary-fixed-dim": "#ffb59c",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#ffdbcf",
+                        "on-secondary-fixed-variant": "#3a4b37",
+                        "on-surface-variant": "#56423c",
+                        "outline": "#89726b",
+                        "on-background": "#1f1b17",
+                        "outline-variant": "#dcc1b8",
+                        "secondary-fixed-dim": "#b8ccb2",
+                        "secondary-fixed": "#d4e8cd",
+                        "on-tertiary": "#ffffff",
+                        "accent-pressed": "#9C4A2C",
+                        "on-tertiary-fixed": "#1d1c18",
+                        "inverse-on-surface": "#f9efe8",
+                        "surface-container": "#f6ece5",
+                        "accent-dark": "#8F3F26",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-bright": "#fff8f5",
+                        "border-hairline": "rgba(43,38,34,0.08)",
+                        "accent-tint": "#F3E3DA",
+                        "tertiary-container": "#77746f",
+                        "tertiary-fixed": "#e6e2db",
+                        "tertiary-fixed-dim": "#cac6bf",
+                        "surface-dim": "#e2d8d2",
+                        "secondary": "#51634e",
+                        "on-secondary-fixed": "#0f1f0f",
+                        "surface-container-high": "#f1e6e0",
+                        "inverse-primary": "#ffb59c",
+                        "on-surface": "#1f1b17",
+                        "on-primary-fixed-variant": "#7d2d0d",
+                        "on-primary-container": "#fffbff",
+                        "surface-tint": "#9c4323",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#d4e8cd",
+                        "primary-container": "#b95936",
+                        "tertiary": "#5e5c57",
+                        "on-error-container": "#93000a",
+                        "text-tertiary": "#9A9088",
+                        "on-secondary-container": "#576954",
+                        "primary": "#994121",
+                        "inverse-surface": "#352f2b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "safe-bottom": "34px",
+                        "margin-page": "24px",
+                        "stack-lg": "32px",
+                        "gutter": "16px",
+                        "stack-sm": "8px",
+                        "safe-top": "59px"
+                    },
+                    "fontFamily": {
+                        "caption": ["Inter"],
+                        "title-md": ["Fraunces"],
+                        "label-bold": ["Inter"],
+                        "display-lg-mobile": ["Fraunces"],
+                        "display-lg": ["Fraunces"],
+                        "body-base": ["Inter"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "title-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "display-lg": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-base": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    },
+                    "boxShadow": {
+                        'warm-lift': '0 8px 24px rgba(43, 38, 34, 0.08)',
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        body {
+            /* Fallback background if gradient isn't supported */
+            background-color: #fff8f5; 
+        }
+        
+        .hero-gradient {
+            /* Terracotta to Sage Green soft linear gradient as requested */
+            background: linear-gradient(135deg, rgba(193, 95, 60, 0.15) 0%, rgba(139, 158, 134, 0.15) 100%);
+        }
+
+        .book-hover-effect {
+            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        
+        .book-hover-effect:hover {
+            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) scale(1.02);
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-10px) rotate(-1deg); }
+            100% { transform: translateY(0px) rotate(-2deg); }
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen antialiased flex flex-col font-body-base text-on-surface">
+<!-- Hero Content Container -->
+<main class="flex-1 flex flex-col items-center justify-center pt-safe-top pb-safe-bottom px-margin-page hero-gradient relative overflow-hidden h-screen">
+<!-- Decorative elements (subtle) -->
+<div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30 mix-blend-multiply" style="background-image: radial-gradient(circle at top right, rgba(255,255,255,0.8), transparent 40%);"></div>
+<div class="w-full max-w-md mx-auto flex flex-col items-center text-center z-10">
+<!-- Floating Book Mockup -->
+<div class="mb-stack-lg relative w-full max-w-[280px] aspect-[4/5] animate-float book-hover-effect shadow-warm-lift rounded-sm bg-surface-container-lowest p-2 border border-border-hairline">
+<div class="w-full h-full bg-surface-variant relative overflow-hidden rounded-sm">
+<img alt="Italy travel photo book cover" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtba0qJo1lrdI0ktta3--AEl4mIR0fYxlIlytlh1R8rzPwgS6DrFuRlUjnI7cBCgkWx9Y4JYkcK5sByzk-CG6bEWtIg20MXCHIULAKcvUr_r1i7-tZFGZid3YYe722_yM_iPRLHfTXvuV8JbE4yqYb6pH6b_ks3PAynNxbU8Ib_qrwq91IQvnNTWKYxBOMH7T0wxusTJnuuA2TjwKgnyRWUbVKcUxv61Zdz19RhAMKf42WnHzO9_CxhUA"/>
+<!-- Spine shadow for realistic book feel -->
+<div class="absolute top-0 left-0 bottom-0 w-8 bg-gradient-to-r from-black/20 to-transparent pointer-events-none"></div>
+</div>
+</div>
+<!-- Typography -->
+<h1 class="font-display-lg-mobile md:font-display-lg text-on-surface mb-stack-sm tracking-tight text-[#2B2622]">
+                Welcome home from Italy
+            </h1>
+<p class="font-body-base text-text-secondary mb-stack-lg max-w-[320px]">
+                While you were away we picked your 42 best photos and laid out a draft book.
+            </p>
+<!-- Action Area -->
+<div class="w-full flex flex-col gap-stack-md mt-auto md:mt-0">
+<button class="w-full h-[52px] bg-primary text-on-primary font-label-bold rounded-lg flex items-center justify-center transition-colors hover:bg-accent-pressed active:bg-accent-dark shadow-sm">
+                    Review my book
+                </button>
+<button class="w-full h-[52px] bg-surface-sand text-[#2B2622] font-label-bold rounded-lg flex items-center justify-center border border-border-hairline transition-colors hover:bg-surface-variant">
+                    Maybe later
+                </button>
+</div>
+<!-- Caption -->
+<p class="font-caption text-text-tertiary mt-stack-md uppercase tracking-wider">
+                Draft ready - Rome, Florence, Amalfi
+            </p>
+</div>
+</main>
+<!-- Navigation explicitly suppressed as per rules for transactional/onboarding intent -->
+<script>
+        // Simple entrance animation for the text elements to stagger in smoothly
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('h1, p, button');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(10px)';
+                el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                
+                requestAnimationFrame(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapters - Choose a Style</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#ffb59c",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f9efe8",
+                        "text-secondary": "#6B6259",
+                        "on-background": "#1f1b17",
+                        "on-primary-fixed": "#390c00",
+                        "accent-tint": "#F3E3DA",
+                        "on-secondary-container": "#576954",
+                        "tertiary-fixed-dim": "#cac6bf",
+                        "secondary-fixed": "#d4e8cd",
+                        "accent-dark": "#8F3F26",
+                        "surface-dim": "#e2d8d2",
+                        "inverse-surface": "#352f2b",
+                        "surface-container-low": "#fcf2eb",
+                        "surface-container": "#f6ece5",
+                        "secondary-container": "#d4e8cd",
+                        "on-tertiary-fixed": "#1d1c18",
+                        "on-secondary-fixed": "#0f1f0f",
+                        "primary-container": "#b95936",
+                        "on-tertiary-fixed-variant": "#484742",
+                        "accent-pressed": "#9C4A2C",
+                        "surface-variant": "#ebe1da",
+                        "surface-container-high": "#f1e6e0",
+                        "on-surface-variant": "#56423c",
+                        "on-primary-container": "#fffbff",
+                        "background": "#fff8f5",
+                        "tertiary": "#5e5c57",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1f1b17",
+                        "outline": "#89726b",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#ffb59c",
+                        "primary-fixed": "#ffdbcf",
+                        "border-hairline": "rgba(43,38,34,0.08)",
+                        "tertiary-container": "#77746f",
+                        "on-primary-fixed-variant": "#7d2d0d",
+                        "surface-bright": "#fff8f5",
+                        "on-tertiary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#3a4b37",
+                        "on-error-container": "#93000a",
+                        "secondary": "#51634e",
+                        "outline-variant": "#dcc1b8",
+                        "surface-tint": "#9c4323",
+                        "on-secondary": "#ffffff",
+                        "surface-sand": "#F2EADE",
+                        "surface": "#fff8f5",
+                        "secondary-fixed-dim": "#b8ccb2",
+                        "primary": "#994121",
+                        "text-tertiary": "#9A9088",
+                        "surface-container-highest": "#ebe1da",
+                        "tertiary-fixed": "#e6e2db"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "safe-bottom": "34px",
+                        "stack-lg": "32px",
+                        "gutter": "16px",
+                        "margin-page": "24px",
+                        "safe-top": "59px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Fraunces", "serif"],
+                        "body-base": ["Inter", "sans-serif"],
+                        "caption": ["Inter", "sans-serif"],
+                        "display-lg-mobile": ["Fraunces", "serif"],
+                        "display-lg": ["Fraunces", "serif"],
+                        "label-bold": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "title-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-base": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "display-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "display-lg": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    },
+                    "boxShadow": {
+                        "editorial": "0 8px 24px rgba(43, 38, 34, 0.08)"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-base antialiased min-h-screen flex flex-col pt-safe-top pb-safe-bottom md:pb-8">
+<!-- Top App Bar (Modified for focused task flow) -->
+<header class="flex items-center justify-between px-margin-page h-[59px] w-full z-50 sticky top-0 bg-background md:hidden">
+<button aria-label="Go back" class="flex items-center justify-center w-10 h-10 -ml-2 text-primary transition-opacity hover:opacity-80">
+<span class="material-symbols-outlined">close</span>
+</button>
+<span class="font-title-md text-title-md text-primary tracking-tight"></span>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<main class="flex-grow flex flex-col items-center px-margin-page md:pt-12 max-w-[600px] mx-auto w-full">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-center mb-stack-lg mt-stack-md md:mt-0">Choose a style</h1>
+<!-- Live Preview Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-editorial p-6 mb-stack-lg">
+<p class="font-label-bold text-label-bold text-text-secondary uppercase tracking-wider mb-stack-md text-center text-xs">Live Preview</p>
+<div class="aspect-[4/3] w-full rounded-lg overflow-hidden bg-surface-variant relative shadow-inner">
+<img alt="Live preview of a photobook spread featuring coastal towns" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuU5KyP-tl8Ezsf_P1xvttS1STRHQr91kIyDbkqbMPGYL_AoMyqadaOKqTxCD6RKdfxVpQ7hl64Njs9P5ElrJu5iENfJEzhLmvoXzInMJAULy14J3bw8sapqBjNLEumaNy46hV9kgxGuyqjDFUtawZfPCiH9dxrkAV3Du7TZJaNQ_vgVJyIQKk7Hyf8CfrnrMX3xCIRA9f0h31enrCJtkxTUzoximJ6VTMAXALa3-thUk97OWFI5MiDQS0"/>
+</div>
+</div>
+<!-- Theme Options List -->
+<div class="w-full space-y-stack-md flex-grow">
+<!-- Option 1: Editorial (Recommended) -->
+<button class="w-full text-left relative bg-accent-tint border-2 border-primary rounded-xl p-4 flex gap-4 items-start transition-all duration-300 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+<div class="w-16 h-16 shrink-0 bg-surface-container-lowest rounded-md overflow-hidden border border-border-hairline">
+<img class="w-full h-full object-cover" data-alt="A small thumbnail showing a minimalist photobook layout with a full bleed landscape image and elegant serif typography on warm cream paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWsU1C64kdNovSGfjutcDkozqrgt6KnWbVS37kfLVxPMTSIlSJ5OtXxULZk7IyqhxGKkWzP8yNCJ1BIidJ6MXz433VWRDU8o_S1qaUv_VBWdkJJoPpKDOIKZJXfIK2n8ZxVAQt26eF3OoB5-bfzUggm172l8Tl4tTRHcsmPURF8DlVr0RQIJgV_FUrPINn4Ji5Qz9Y-zBacd8-PBv4OxuJmFfp14BnsvRjEI3208fUkKLPS1piwIY5mv5Hz3qI0MJBmINCn7Wewzc"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-title-md text-[18px] leading-tight text-on-background">Editorial</h3>
+</div>
+<p class="font-body-base text-body-base text-on-surface-variant mb-2">Elegant, full-bleed layouts for storytelling.</p>
+<div class="bg-surface-container-lowest border border-primary/20 rounded-lg p-2 inline-flex flex-col gap-1 w-full mt-2">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-bold text-caption text-primary">Recommended for landscape trips</span>
+</div>
+<p class="font-caption text-[11px] text-text-secondary leading-tight italic mt-0.5">We picked this because your trip has lots of wide scenery.</p>
+</div>
+</div>
+<div class="absolute top-4 right-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</button>
+<!-- Option 2: Iconic -->
+<button class="w-full text-left relative bg-surface-container-lowest border border-border-hairline hover:border-outline-variant hover:bg-surface-container-low rounded-xl p-4 flex gap-4 items-center transition-all duration-300 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-sm">
+<div class="w-16 h-16 shrink-0 bg-surface-variant rounded-md overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A small thumbnail showing a photobook layout featuring one large, bold, centralized photo with thick white borders on a clean page." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzgXGo2NE68gaxWpJ0d0vEDBvJcDrYZwiywKoH0bcV7JzvWaeRNHugAro1wvVeNjEVHNItMzVn3aVm-cUqUN0FFasjIocO3zu7i5VFbc26tnaAlzbafKJc1naj6Q4kGuly29HuybPcPslV4RYEPY9AUBfUNJF6g37vP1vjjkJWozHGHtM1nyRz2alkFt2ucrjVEDjtQbMzazT2kOaEBQ1mHVLwmVLO2jJJb8BZ_ek2Rvt1TXWqlr97CcBft7u_FR1w70huoEBs6Sg"/>
+</div>
+<div>
+<h3 class="font-title-md text-[18px] leading-tight text-on-background mb-1">Iconic</h3>
+<p class="font-body-base text-body-base text-text-secondary">Bold, single-photo focuses for impactful shots.</p>
+</div>
+</button>
+<!-- Option 3: Minimal -->
+<button class="w-full text-left relative bg-surface-container-lowest border border-border-hairline hover:border-outline-variant hover:bg-surface-container-low rounded-xl p-4 flex gap-4 items-center transition-all duration-300 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-sm">
+<div class="w-16 h-16 shrink-0 bg-surface-variant rounded-md overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A small thumbnail showing a very clean photobook layout with small delicate photos and lots of blank warm cream space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4wOg1jGmXZFadkHt5oQS9MomUie1OQXXsGA7W9ZpwMYWJiOca8B9KUD_gOWFmgoLkPhms-WO82tHXl4U9Uyw4uVvzy1XkE3CEpwvH4hEopkxouGfkPerr52DkA7QtYA7hJBhQUcbBIhdPxDAnuZXnKN7Ivq7EmGAIbnLkDmw9Y1jz2h5LwAjQ4QvQJE50w37MXELpLIaAmwDrtNaBhUvL2VxWBF7CgFuNMr1flq4X6a19FlntYyZ81t_H7qzPnLlui9t2IjZFhN0"/>
+</div>
+<div>
+<h3 class="font-title-md text-[18px] leading-tight text-on-background mb-1">Minimal</h3>
+<p class="font-body-base text-body-base text-text-secondary">Clean white space and quiet typography.</p>
+</div>
+</button>
+<!-- Option 4: Classic -->
+<button class="w-full text-left relative bg-surface-container-lowest border border-border-hairline hover:border-outline-variant hover:bg-surface-container-low rounded-xl p-4 flex gap-4 items-center transition-all duration-300 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-sm">
+<div class="w-16 h-16 shrink-0 bg-surface-variant rounded-md overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A small thumbnail showing a traditional grid-based photobook layout with multiple square photos neatly arranged." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWDDay5SgnHr23M8cKK-qmVhYGcjlI9vkM1iGj8ozQGXpy8Ev62IJVNxb0z15MAyyiQf06MuqptULbjHrkzOMjgJQj8hk8BN1uaSp8qxTWXiy9OQQzB4K_YLqgIKboKiURocmnyTVj6thS0DJaf_W7WTROoyf0YwY-GTF5ICIHR-8wajIc7vsZd8yKMOAn-_C7cteRP01gaEfyD5OnH68U-dLr2YNEMVM6uQIjL4giW8QDMXE9EZgwzM2jXSNlgRzCIiIOkycGKuY"/>
+</div>
+<div>
+<h3 class="font-title-md text-[18px] leading-tight text-on-background mb-1">Classic</h3>
+<p class="font-body-base text-body-base text-text-secondary">Traditional grid layouts for a timeless look.</p>
+</div>
+</button>
+</div>
+</main>
+<!-- Fixed Bottom Action Area -->
+<div class="fixed bottom-0 left-0 w-full bg-background border-t border-border-hairline p-margin-page pb-safe-bottom z-50 md:relative md:bg-transparent md:border-none md:mt-stack-lg">
+<div class="max-w-[600px] mx-auto w-full">
+<button class="w-full h-[52px] bg-primary text-on-primary font-label-bold text-body-base rounded-full flex items-center justify-center transition-colors hover:opacity-90 active:bg-accent-pressed">
+                Use this style
+            </button>
+</div>
+</div>
+</body></html>

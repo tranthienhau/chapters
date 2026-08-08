@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapters - Welcome</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#7d2d0d",
+                        "on-background": "#1f1b17",
+                        "tertiary-fixed-dim": "#cac6bf",
+                        "surface-variant": "#ebe1da",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#fcf2eb",
+                        "on-secondary-fixed": "#0f1f0f",
+                        "text-tertiary": "#9A9088",
+                        "primary-fixed": "#ffdbcf",
+                        "error": "#ba1a1a",
+                        "text-secondary": "#6B6259",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#e2d8d2",
+                        "tertiary": "#5e5c57",
+                        "on-tertiary-fixed": "#1d1c18",
+                        "on-secondary-fixed-variant": "#3a4b37",
+                        "surface-sand": "#F2EADE",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#ffb59c",
+                        "surface-container": "#f6ece5",
+                        "outline": "#89726b",
+                        "inverse-surface": "#352f2b",
+                        "secondary-fixed-dim": "#b8ccb2",
+                        "primary-fixed-dim": "#ffb59c",
+                        "on-tertiary-container": "#fffbff",
+                        "on-primary-fixed": "#390c00",
+                        "inverse-on-surface": "#f9efe8",
+                        "on-tertiary-fixed-variant": "#484742",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#d4e8cd",
+                        "border-hairline": "rgba(43,38,34,0.08)",
+                        "accent-pressed": "#9C4A2C",
+                        "outline-variant": "#dcc1b8",
+                        "surface-bright": "#fff8f5",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-container": "#576954",
+                        "on-error": "#ffffff",
+                        "background": "#fff8f5",
+                        "surface": "#fff8f5",
+                        "primary": "#994121",
+                        "tertiary-container": "#77746f",
+                        "accent-tint": "#F3E3DA",
+                        "secondary": "#51634e",
+                        "accent-dark": "#8F3F26",
+                        "surface-container-high": "#f1e6e0",
+                        "on-surface-variant": "#56423c",
+                        "surface-tint": "#9c4323",
+                        "surface-container-highest": "#ebe1da",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#e6e2db",
+                        "primary-container": "#b95936",
+                        "secondary-container": "#d4e8cd",
+                        "on-surface": "#1f1b17"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "stack-sm": "8px",
+                        "margin-page": "24px",
+                        "safe-bottom": "34px",
+                        "stack-lg": "32px",
+                        "safe-top": "59px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "body-base": ["Inter"],
+                        "display-lg-mobile": ["Fraunces"],
+                        "title-md": ["Fraunces"],
+                        "display-lg": ["Fraunces"],
+                        "label-bold": ["Inter"],
+                        "caption": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-base": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "title-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-lg": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-base antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<main class="flex-1 flex flex-col h-full relative overflow-hidden max-w-[md] mx-auto w-full md:max-w-md shadow-[0_8px_24px_rgba(43,38,34,0.08)] bg-background">
+<!-- Hero Gradient & Image Section -->
+<section class="relative flex-1 flex flex-col justify-center items-center min-h-[45vh]">
+<!-- Soft Terracotta to Sage Gradient Background -->
+<div class="absolute inset-0 bg-gradient-to-br from-[#C15F3C]/20 via-background to-[#8B9E86]/20 z-0"></div>
+<!-- Focal Image (Photobook Mockup) -->
+<div class="relative z-10 w-full px-margin-page mt-safe-top flex justify-center items-center h-full">
+<img class="w-[85%] max-w-sm object-contain drop-shadow-[0_12px_32px_rgba(43,38,34,0.15)] transform -rotate-2 hover:rotate-0 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Y0lXp_OEMrUPTMY4H3r3L4fxrU7Aw3O5zM96HMs8NfiLfnJlh3rhbIeafquRjKSyzZyHq5oJJkMF2rOjHjwrsh9eVtYFWuTpiZq4M0choTJ3O1WfzDiUraDBqVi5LlPbBMXBlo5QLKVAsmnkcE5Caka8vBS0ee2uD7BQivB7whL2ObgDzpIpIOnGszqG43CnhPMH0P4fijOlq1cdeS7qzCST3qL9tqOfBAPlaMc3dYOLQV1a_py-GiG7tKbKzDHOgFOg_vzb4aU"/>
+</div>
+</section>
+<!-- Content Section -->
+<section class="relative z-20 flex flex-col px-margin-page pb-safe-bottom pt-stack-lg bg-background rounded-t-3xl shadow-[0_-8px_24px_rgba(43,38,34,0.03)] flex-shrink-0">
+<div class="flex flex-col text-center mb-stack-lg gap-stack-sm">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-background">
+                    Your trips, already a book
+                </h1>
+<p class="font-body-base text-body-base text-text-secondary px-2">
+                    Chapters turns your camera roll into a beautiful photobook - automatically, right when you get home.
+                </p>
+</div>
+<!-- Call to Action Actions -->
+<div class="flex flex-col gap-stack-md w-full mb-stack-lg">
+<button class="w-full h-[52px] bg-primary hover:bg-accent-pressed active:scale-[0.98] transition-all duration-200 text-on-primary font-label-bold text-label-bold rounded-[14px] flex items-center justify-center shadow-[0_4px_12px_rgba(153,65,33,0.15)]">
+                    Get started
+                </button>
+<button class="w-full h-[52px] bg-transparent text-on-surface font-label-bold text-label-bold rounded-[14px] flex items-center justify-center hover:bg-surface-variant/50 transition-colors duration-200">
+                    I already have an account
+                </button>
+</div>
+<!-- Pagination Dots -->
+<div class="flex justify-center items-center gap-2 mb-stack-sm">
+<div class="w-2 h-2 rounded-full bg-primary transition-all duration-300"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim transition-all duration-300"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim transition-all duration-300"></div>
+</div>
+</section>
+</main>
+</body></html>

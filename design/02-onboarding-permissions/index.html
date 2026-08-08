@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Permissions - Chapters</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#b8ccb2",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#77746f",
+                      "on-primary": "#ffffff",
+                      "accent-dark": "#8F3F26",
+                      "inverse-primary": "#ffb59c",
+                      "accent-pressed": "#9C4A2C",
+                      "on-surface": "#1f1b17",
+                      "text-secondary": "#6B6259",
+                      "on-tertiary-fixed-variant": "#484742",
+                      "accent-tint": "#F3E3DA",
+                      "surface-container": "#f6ece5",
+                      "surface-container-high": "#f1e6e0",
+                      "outline-variant": "#dcc1b8",
+                      "surface-tint": "#9c4323",
+                      "primary-fixed": "#ffdbcf",
+                      "surface-sand": "#F2EADE",
+                      "on-secondary-container": "#576954",
+                      "on-tertiary-container": "#fffbff",
+                      "outline": "#89726b",
+                      "on-surface-variant": "#56423c",
+                      "error": "#ba1a1a",
+                      "on-primary-container": "#fffbff",
+                      "on-background": "#1f1b17",
+                      "surface-dim": "#e2d8d2",
+                      "on-primary-fixed": "#390c00",
+                      "secondary-container": "#d4e8cd",
+                      "border-hairline": "rgba(43,38,34,0.08)",
+                      "primary-fixed-dim": "#ffb59c",
+                      "primary": "#994121",
+                      "background": "#fff8f5",
+                      "primary-container": "#b95936",
+                      "on-secondary-fixed-variant": "#3a4b37",
+                      "on-primary-fixed-variant": "#7d2d0d",
+                      "on-error-container": "#93000a",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#352f2b",
+                      "surface-bright": "#fff8f5",
+                      "tertiary-fixed": "#e6e2db",
+                      "surface": "#fff8f5",
+                      "surface-container-highest": "#ebe1da",
+                      "tertiary": "#5e5c57",
+                      "on-tertiary-fixed": "#1d1c18",
+                      "surface-variant": "#ebe1da",
+                      "secondary-fixed": "#d4e8cd",
+                      "tertiary-fixed-dim": "#cac6bf",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#0f1f0f",
+                      "inverse-on-surface": "#f9efe8",
+                      "secondary": "#51634e",
+                      "error-container": "#ffdad6",
+                      "text-tertiary": "#9A9088",
+                      "surface-container-low": "#fcf2eb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "card": "20px"
+              },
+              "spacing": {
+                      "safe-bottom": "34px",
+                      "stack-sm": "8px",
+                      "stack-lg": "32px",
+                      "safe-top": "59px",
+                      "stack-md": "16px",
+                      "margin-page": "24px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "body-base": [
+                              "Inter", "sans-serif"
+                      ],
+                      "display-lg-mobile": [
+                              "Fraunces", "serif"
+                      ],
+                      "display-lg": [
+                              "Fraunces", "serif"
+                      ],
+                      "title-md": [
+                              "Fraunces", "serif"
+                      ],
+                      "label-bold": [
+                              "Inter", "sans-serif"
+                      ],
+                      "caption": [
+                              "Inter", "sans-serif"
+                      ]
+              },
+              "fontSize": {
+                      "body-base": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "34px",
+                              {
+                                      "lineHeight": "42px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-md": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              },
+              boxShadow: {
+                  'ambient': '0 8px 24px rgba(43, 38, 34, 0.08)',
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .custom-gradient-bg {
+            background-color: #FAF5EE; /* Fallback */
+            background-image: linear-gradient(to bottom, #FAF5EE, #FFF8F5);
+        }
+        .btn-primary {
+            background-color: #C15F3C;
+            color: white;
+            transition: background-color 0.2s ease;
+        }
+        .btn-primary:active {
+            background-color: #9C4A2C;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="custom-gradient-bg min-h-screen text-on-surface font-body-base flex flex-col pt-safe-top pb-safe-bottom px-margin-page selection:bg-accent-tint selection:text-primary relative overflow-hidden">
+<!-- Top Bar (Minimal, just back button for onboarding flow) -->
+<header class="flex items-center justify-start h-[59px] w-full shrink-0">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-on-surface" data-icon="arrow_back" data-weight="regular">arrow_back</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col justify-center max-w-md mx-auto w-full pb-stack-lg z-10 relative">
+<!-- Header Section -->
+<div class="mb-10 text-center">
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-[#2B2622] mb-4 tracking-tight">Meet your personal travel assistant</h1>
+<p class="font-body-base text-body-base text-text-secondary max-w-[280px] mx-auto">
+                To create your photobooks automatically, Chapters needs a few permissions.
+            </p>
+</div>
+<!-- Permissions Cards -->
+<div class="flex flex-col gap-stack-md w-full">
+<!-- Photo Permission Card -->
+<div class="bg-[#FFFDFB] rounded-card p-6 shadow-ambient border border-border-hairline/50 flex flex-col gap-4">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-[#8B9E86]/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[#576954]" data-icon="photo_library" style="font-variation-settings: 'FILL' 1;">photo_library</span>
+</div>
+<div class="flex-grow pt-1">
+<h3 class="font-title-md text-title-md text-[#2B2622] mb-1">Photos</h3>
+<p class="font-body-base text-sm text-text-secondary leading-relaxed">
+                            So we can find your best trip shots and ignore screenshots or receipts.
+                        </p>
+</div>
+</div>
+<div class="flex justify-end mt-2">
+<button class="btn-primary font-label-bold text-label-bold py-2.5 px-6 rounded-full hover:opacity-90">
+                        Allow
+                    </button>
+</div>
+</div>
+<!-- Location Permission Card -->
+<div class="bg-[#FFFDFB] rounded-card p-6 shadow-ambient border border-border-hairline/50 flex flex-col gap-4">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-[#C15F3C]/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[#C15F3C]" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="flex-grow pt-1">
+<h3 class="font-title-md text-title-md text-[#2B2622] mb-1">Location</h3>
+<p class="font-body-base text-sm text-text-secondary leading-relaxed">
+                            So we know when a trip ends and your book is ready to review.
+                        </p>
+</div>
+</div>
+<div class="flex justify-end mt-2">
+<button class="btn-primary font-label-bold text-label-bold py-2.5 px-6 rounded-full hover:opacity-90">
+                        Allow
+                    </button>
+</div>
+</div>
+</div>
+<!-- Privacy Assurance -->
+<div class="mt-8 flex items-center justify-center gap-2 text-[#6B6259]">
+<span class="material-symbols-outlined text-[18px]" data-icon="lock" data-weight="regular">lock</span>
+<p class="font-caption text-caption">Your photos stay private. We only look on-device.</p>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<footer class="mt-auto w-full max-w-md mx-auto pt-4 shrink-0 z-10">
+<button class="btn-primary w-full h-[52px] rounded-xl font-label-bold text-[16px] flex items-center justify-center shadow-sm">
+            Continue
+        </button>
+</footer>
+</body></html>
